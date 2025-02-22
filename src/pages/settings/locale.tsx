@@ -10,7 +10,7 @@ function LocaleSettings() {
     function setNewLocale(locale: string) {
         localStorage.setItem("metallic/locale", locale)
         seti18Locale(locale);
-        setLocale(locale);
+        (setLocale as (newValue: string) => void)(locale);
     }
 
     return (

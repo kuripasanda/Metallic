@@ -40,7 +40,7 @@ function Head({ pageTitle }: HeadTypes) {
         const themeChannel = new BroadcastChannel("metallic/theme");
 
         themeChannel.onmessage = (e) => {
-            setTheme(String(e.data))
+            (setTheme as (newValue: string) => void)(String(e.data))
         }
 
         localStorage.setItem("metallic/theme", theme);
@@ -52,7 +52,7 @@ function Head({ pageTitle }: HeadTypes) {
         const serviceChannel = new BroadcastChannel("metallic/service");
 
         serviceChannel.onmessage = (e) => {
-            setService(String(e.data))
+            (setService as (newValue: string) => void)(String(e.data))
         }
 
         localStorage.setItem("metallic/service", service);
@@ -63,7 +63,7 @@ function Head({ pageTitle }: HeadTypes) {
         const engineChannel = new BroadcastChannel("metallic/engine");
 
         engineChannel.onmessage = (e) => {
-            setSearchEngine(String(e.data))
+            (setSearchEngine as (newValue: string) => void)(String(e.data))
         }
 
         localStorage.setItem("metallic/engine", searchEngine);
@@ -74,7 +74,7 @@ function Head({ pageTitle }: HeadTypes) {
         const titleChannel = new BroadcastChannel("metallic/title");
 
         titleChannel.onmessage = (e) => {
-            setTitle(String(e.data))
+            (setTitle as (newValue: string) => void)(String(e.data))
         }
 
         localStorage.setItem("metallic/title", title);
@@ -85,7 +85,7 @@ function Head({ pageTitle }: HeadTypes) {
         const iconChannel = new BroadcastChannel("metallic/icon");
 
         iconChannel.onmessage = (e) => {
-            setIcon(String(e.data))
+            (setIcon as (newValue: string) => void)(String(e.data))
         }
 
         localStorage.setItem("metallic/icon", icon);
@@ -96,7 +96,7 @@ function Head({ pageTitle }: HeadTypes) {
         const localeChannel = new BroadcastChannel("metallic/locale");
 
         localeChannel.onmessage = (e) => {
-            setLocale(String(e.data))
+            (setLocale as (newValue: string) => void)(String(e.data))
             seti18Locale(e.data);
         }
 
@@ -108,7 +108,7 @@ function Head({ pageTitle }: HeadTypes) {
         const openChannel = new BroadcastChannel("metallic/open");
 
         openChannel.onmessage = (e) => {
-            setOpenUsing(String(e.data))
+            (setOpenUsing as (newValue: string) => void)(String(e.data))
         }
 
         localStorage.setItem("metallic/open", openUsing);

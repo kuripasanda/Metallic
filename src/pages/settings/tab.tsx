@@ -18,8 +18,8 @@ function TabSettings() {
     const [icon, setIcon] = useGlobalState<string>("icon", localStorage.getItem("metallic/icon") || "");
 
     function setPreset(title: string, icon: string) {
-        setTitle(title);
-        setIcon(icon)
+        (setTitle as (newValue: string) => void)(title);
+        (setIcon as (newValue: string) => void)(icon);
     }
 
     function resetTab() {
@@ -57,8 +57,8 @@ function TabSettings() {
             </section>
             <h1 class="text-4xl font-bold my-8"><Obfuscated>{t("settings.tab.customTabMask.title")}</Obfuscated></h1>
             <section class="flex flex-wrap items-center gap-3">
-                <SquareInput placeholder={t("settings.tab.customTabMask.titleInput")} value={title} onInput={(e: any) => setTitle(e.target.value)} />
-                <SquareInput placeholder={t("settings.tab.customTabMask.iconInput")} value={icon} onInput={(e: any) => setIcon(e.target.value)} />
+                <SquareInput placeholder={t("settings.tab.customTabMask.titleInput")} value={title} onInput={(e: any) => (setTitle as (newValue: string) => void)(e.target.value)} />
+                <SquareInput placeholder={t("settings.tab.customTabMask.iconInput")} value={icon} onInput={(e: any) => (setIcon as (newValue: string) => void)(e.target.value)} />
             </section>
         </>
     )

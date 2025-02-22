@@ -13,7 +13,7 @@ function AppearanceSettings() {
             <h1 class="text-4xl font-bold mb-8">{t("settings.appearance.theme.title")}</h1>
             <section class="flex flex-wrap items-center gap-3">
                 {themes.map((themeItem: any) => (
-                    <SquareButton active={theme == themeItem.id} onClick={() => setTheme(themeItem.id)}>
+                    <SquareButton active={theme == themeItem.id} onClick={() => (setTheme as (newValue: string) => void)(themeItem.id)}>
                         <div class="w-4 h-4 rounded-full" style={{ background: themeItem.theme.primary }}></div>
                         <span class="font-bold"><Obfuscated>{themeItem.name}</Obfuscated></span>
                     </SquareButton>

@@ -20,19 +20,19 @@ function Settings() {
             <Head pageTitle={t("title.settings")} />
             <div class="flex gap-7">
                 <aside class="flex flex-col gap-4 sticky top-[108px] self-start">
-                    <Link activeClassName="bg-secondary text-textInverse settingsButtonActive" class="settingsButton rounded-lg px-4 py-2 select-none cursor-pointer h-10 flex items-center gap-1.5 w-auto sm:w-72" href="/settings/search">
+                    <Link activeClassName="bg-secondary text-textInverse settingsButtonActive" class="settingsButton rounded-lg px-4 py-2 select-none cursor-pointer h-10 flex items-center gap-1.5 w-auto sm:w-72" path="/settings/search">
                         <SearchIcon />
                         <span class="font-bold sr-only sm:not-sr-only"><Obfuscated>{t("settings.tabs.search")}</Obfuscated></span>
                     </Link>
-                    <Link activeClassName="bg-secondary text-textInverse settingsButtonActive" class="settingsButton rounded-lg px-4 py-2 select-none cursor-pointer h-10 flex items-center gap-1.5 w-auto sm:w-72" href="/settings/tab">
+                    <Link activeClassName="bg-secondary text-textInverse settingsButtonActive" class="settingsButton rounded-lg px-4 py-2 select-none cursor-pointer h-10 flex items-center gap-1.5 w-auto sm:w-72" path="/settings/tab">
                         <TabIcon />
                         <span class="font-bold #555 sr-only sm:not-sr-only"><Obfuscated>{t("settings.tabs.tab")}</Obfuscated></span>
                     </Link>
-                    <Link activeClassName="bg-secondary text-textInverse settingsButtonActive" class="settingsButton rounded-lg px-4 py-2 select-none cursor-pointer h-10 flex items-center gap-1.5 w-auto sm:w-72" href="/settings/appearance">
+                    <Link activeClassName="bg-secondary text-textInverse settingsButtonActive" class="settingsButton rounded-lg px-4 py-2 select-none cursor-pointer h-10 flex items-center gap-1.5 w-auto sm:w-72" path="/settings/appearance">
                         <AppearanceIcon />
                         <span class="font-bold #555 sr-only sm:not-sr-only"><Obfuscated>{t("settings.tabs.appearance")}</Obfuscated></span>
                     </Link>
-                    <Link activeClassName="bg-secondary text-textInverse settingsButtonActive" class="settingsButton rounded-lg px-4 py-2 select-none cursor-pointer h-10 flex items-center gap-1.5 w-auto sm:w-72" href="/settings/locale">
+                    <Link activeClassName="bg-secondary text-textInverse settingsButtonActive" class="settingsButton rounded-lg px-4 py-2 select-none cursor-pointer h-10 flex items-center gap-1.5 w-auto sm:w-72" path="/settings/locale">
                         <LocaleIcon />
                         <span class="font-bold #555 sr-only sm:not-sr-only"><Obfuscated>{t("settings.tabs.locale")}</Obfuscated></span>
                     </Link>
