@@ -27,6 +27,7 @@ function Web({ open, setOpen }: WebTypes) {
         if (web && web.current) {
             setTitle(web.current.contentWindow.document.title || web.current.contentWindow.location.toString());
             setIcon(web.current.contentWindow.document.querySelector("link[rel*='icon']")?.href || web.current.contentWindow.document.querySelector("link[rel='shortcut icon']")?.href || "");
+            web.current.focus();
         } 
     }
 
@@ -37,6 +38,12 @@ function Web({ open, setOpen }: WebTypes) {
     useEffect(() => {
         document.body.dataset.webOpen = open
     }, [open])
+
+    useEffect(() => {
+        if (web?.current && open) {
+            web.current.focus();
+        }
+    }, [open]);
 
     function refreshWeb() {
         if (web && web.current) {
@@ -76,7 +83,7 @@ function Web({ open, setOpen }: WebTypes) {
 
     return (
         <>
-            <header class="webHeader fixed top-0 right-0 left-0 z-100 px-7 py-5 flex items-center justify-between bg-background not-web-open-hidden">
+            <header style={{ zIndex: 100 }} class="webHeader fixed top-0 right-0 left-0 px-7 py-5 flex items-center justify-between bg-background not-web-open-hidden">
                 <div class="flex gap-4 overflow-hidden whitespace-pre mr-7">
                     {icon ? (
                         <img draggable={false} height="24" width="24" src={icon} loading="lazy" />
@@ -97,7 +104,8 @@ function Web({ open, setOpen }: WebTypes) {
                     </RoundButton>
                 </div>
             </header>
-            <iframe ref={webRef} onLoad={updateMeta} class="web fixed top-20 left-0 right-0 bottom-0 border-0 bg-background w-full h-full select-none z-100 not-web-open-hidden"></iframe>
+        
+            <iframe ref={webRef} onLoad={updateMeta} class="web fixed top-10 py-10 px-5 left-0 right-0 bottom-0 border-0 bg-background select-none h-full z-100 not-web-open-hidden" style={{ width: "100%" }} tabIndex={0}></iframe>
         </>
     )
 }

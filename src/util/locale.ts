@@ -10,6 +10,7 @@ import de from "../locales/de.json";
 import ar from "../locales/ar.json";
 import zh from "../locales/zh.json";
 import hi from "../locales/hi.json";
+import ja from "../locales/ja.json";
 
 const language = localStorage.getItem("metallic/locale") || "en"
 
@@ -37,6 +38,9 @@ const resources = {
     },
     hi: {
         translation: hi
+    },
+    ja: {
+        translation: ja
     }
 };
 

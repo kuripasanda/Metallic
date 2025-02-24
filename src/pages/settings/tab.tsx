@@ -23,7 +23,7 @@ function TabSettings() {
     }
 
     function resetTab() {
-        setPreset("", "")
+        setPreset("MediaWiki", "https://www.mediawiki.org/static/images/icons/mediawikiwiki.svg")
     }
 
     return (
@@ -38,6 +38,9 @@ function TabSettings() {
                 </RoundButton>
                 <RoundButton active={title == "Wikipedia" && icon == "https://www.wikipedia.org/static/favicon/wikipedia.ico"} onClick={() => setPreset("Wikipedia", "https://www.wikipedia.org/static/favicon/wikipedia.ico")}>
                     <img draggable={false} height="24" width="24" src={wikipediaLogo} loading="lazy" />
+                </RoundButton>
+                <RoundButton active={title == "MediaWiki" && icon == "https://www.mediawiki.org/static/images/icons/mediawikiwiki.svg"} onClick={() => setPreset("MediaWiki", "https://www.mediawiki.org/static/images/icons/mediawikiwiki.svg")}>
+                    <img draggable={false} height="24" width="24" src="https://www.mediawiki.org/static/images/icons/mediawikiwiki.svg" loading="lazy" />
                 </RoundButton>
                 <RoundButton active={title == "Canvas" && icon == "https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico"} onClick={() => setPreset("Canvas", "https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico")}>
                     <img draggable={false} height="24" width="24" src={canvasLogo} loading="lazy" />

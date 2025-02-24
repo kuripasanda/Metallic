@@ -9,18 +9,22 @@ function Head({ pageTitle }: HeadTypes) {
     const [searchEngine, setSearchEngine] = useGlobalState<string>("engine", localStorage.getItem("metallic/engine") || searchEngineData.google);
     const [title, setTitle] = useGlobalState<string>("title", localStorage.getItem("metallic/title") || "");
     const [icon, setIcon] = useGlobalState<string>("icon", localStorage.getItem("metallic/icon") || "");
-    const [locale, setLocale] = useGlobalState<string>("locale", localStorage.getItem("metallic/locale") || "en");
+    const [locale, setLocale] = useGlobalState<string>("locale", localStorage.getItem("metallic/locale") || "ja");
     const [openUsing, setOpenUsing] = useGlobalState<string>("open", localStorage.getItem("metallic/open") || "default");
+
+    useEffect(() => {
+        seti18Locale(locale);
+    }, [locale]);
 
     useEffect(() => {
         if (title) {
             window.document.title = title;
         } else {
-            if (pageTitle) {
-                window.document.title = pageTitle + " | Metallic";
-            } else {
-                window.document.title = "Metallic";
-            }
+        //    if (pageTitle) {
+        //        //window.document.title = pageTitle + " | MediaWiki";
+        //    } else {
+            window.document.title = "MediaWiki";
+        //    }
         }
     }, [title, locale])
 
@@ -31,7 +35,8 @@ function Head({ pageTitle }: HeadTypes) {
             if (icon) {
                 iconElement.setAttribute("href", icon);
             } else {
-                iconElement.setAttribute("href", "/assets/logo.svg");
+                //iconElement.setAttribute("href", "/assets/logo.svg");
+                iconElement.setAttribute("href", "https://www.mediawiki.org/static/images/icons/mediawikiwiki.svg")
             }
         }
     }, [icon])

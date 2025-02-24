@@ -11,7 +11,7 @@
         "author": "Alphabet Inc.",
         "description": "Watch, share, and enjoy videos anytime, anywhere.",
         "icon": "/apps/youtube.png",
-        "url": "https://www.youtube.com"
+        "url": "https://youtube.com"
     },
     {
         "name": "Spotify",
@@ -82,5 +82,26 @@
         "description": "Engage in natural conversations with an AI assistant.",
         "icon": "/apps/chatgpt.svg",
         "url": "https://chat.openai.com"
+    },
+    {
+        "name": "Gemini",
+        "author": "Google",
+        "description": "AI-powered search and information retrieval",
+        "icon": "https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg",
+        "url": "https://gemini.google.com"
+    },
+    {
+        "name": "Minecraft",
+        "author": "EagTech",
+        "description": "Minecraft is a sandbox video game developed by Mojang Studios.",
+        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ841bv0OEhUTN76TFwI7RR4v_sUe01JTQUWCnoIwtH2x3C-MfL-q0NrRTarX2fLjUIfZw&usqp=CAU",
+        "url": "https://solar.keisan.f5.si/"
+    },
+    {
+        "name": "Solar",
+        "author": "bomberfish",
+        "description": "A browser-based operating system offering a modern design and user-friendly interface", 
+        "icon": "https://raw.githubusercontent.com/kuripasanda/SolarOS/refs/heads/master/resources/favicon.svg",
+        "url": "https://web.keisan.f5.si/"
     }
 ]

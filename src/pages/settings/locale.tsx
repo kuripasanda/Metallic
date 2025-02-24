@@ -5,7 +5,7 @@ import { seti18Locale } from "../../util/locale";
 
 function LocaleSettings() {
     const { t } = useTranslation();
-    const [locale, setLocale] = useGlobalState<string>("locale", localStorage.getItem("metallic/locale") || "en");
+    const [locale, setLocale] = useGlobalState<string>("locale", localStorage.getItem("metallic/locale") || "ja");
 
     function setNewLocale(locale: string) {
         localStorage.setItem("metallic/locale", locale)
@@ -40,6 +40,9 @@ function LocaleSettings() {
                 </SquareButton>
                 <SquareButton active={locale == "hi"} onClick={() => setNewLocale("hi")}>
                     <span class="font-bold">हिंदी</span>
+                </SquareButton>
+                <SquareButton active={locale == "ja"} onClick={() => setNewLocale("ja")}>
+                    <span class="font-bold">日本語</span>
                 </SquareButton>
             </section>
         </>
