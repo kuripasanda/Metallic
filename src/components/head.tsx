@@ -20,11 +20,11 @@ function Head({ pageTitle }: HeadTypes) {
         if (title) {
             window.document.title = title;
         } else {
-        //    if (pageTitle) {
-        //        //window.document.title = pageTitle + " | MediaWiki";
-        //    } else {
+            if (pageTitle) {
+                //window.document.title = pageTitle + " | MediaWiki";
+            } else {
             window.document.title = "MediaWiki";
-        //    }
+            }
         }
     }, [title, locale])
 

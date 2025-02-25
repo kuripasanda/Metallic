@@ -1,4 +1,3 @@
-import JSX from "react";
 import { Head } from "../components/head";
 import { UtilLink } from "../util/link";
 import { useLocation } from "react-router-dom";
@@ -8,7 +7,7 @@ import { TabIcon } from "../assets/tabIcon";
 import { AppearanceIcon } from "../assets/appearanceIcon";
 import { LocaleIcon } from "../assets/localeIcon";
 import { Obfuscated } from "../util/obfuscate";
-import { AppearanceSettings } from "./settings/appearance";
+//import { AppearanceSettings } from "./settings/appearance";
 import { SearchSettings } from "./settings/search";
 import { TabSettings } from "./settings/tab";
 import { LocaleSettings } from "./settings/locale";
