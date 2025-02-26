@@ -7,11 +7,11 @@
   "author": "Nebelung",
   "type": "module",
   "scripts": {
-    "start": "pnpm run test && tsx index.ts",
-    "dev": "pnpm run test && vite",
-    "build": "pnpm run test && tsc && vite build",
-    "build-static": "pnpm run test && vite build && tsx build.ts",
-    "preview": "pnpm run test && vite preview",
+    "start": "npm run test && tsx index.ts",
+    "dev": "npm run test && vite",
+    "build": "npm run test && tsc && vite build",
+    "build-static": "npm run test && vite build && tsx build.ts",
+    "preview": "npm run test && vite preview",
     "test": "ava"
   },
   "dependencies": {
